@@ -1,0 +1,113 @@
+/* mi-componente.component.css */
+/* Estilos para el sidenav y el contenido */
+.sidenav-container {
+  height: 100vh;
+  background-color: #111B22;
+  
+}
+
+.sidenav {
+  width: 250px;
+  background-color: #1B2832;
+}
+
+.sidenav mat-toolbar {
+  background-color: #010E17;
+}
+
+.mat-nav-list a {
+  text-decoration: none;
+  color: #333;
+}
+
+.mat-nav-list a:hover {
+  background-color: #ddd;
+}
+
+.mat-sidenav-content {
+  padding: 0px;
+}
+
+/* Estilos para la sección de videos */
+.video-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-container {
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 20px;
+}
+
+.main-image {
+  width: 100%;
+  height: auto;
+}
+
+.related-videos {
+  width: 100%;
+  max-width: 800px;
+}
+
+.video-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.video-item {
+  width: calc(33.33% - 20px);
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.video-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+.video-item h4 {
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+/* Estilos para el navbar y los elementos relacionados */
+.mat-toolbar,
+.mat-toolbar-row {
+  background-color: #010E17; /* Color de fondo */
+  color: #ffffff; /* Color del texto */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.mat-nav-list {
+  padding: 0; /* Elimina el relleno interno */
+  list-style: none; /* Elimina los puntos de la lista */
+}
+
+.mat-nav-list a {
+  text-decoration: none; /* Sin subrayado */
+  color: #333; /* Color del texto */
+  display: block; /* Bloque en línea */
+  padding: 10px 20px; /* Relleno */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transiciones suaves */
+}
+
+.mat-nav-list a:hover {
+  background-color: #ffffff; /* Cambia el color de fondo al pasar el mouse */
+  color: #ffffff;
+  border-radius: 20px; /* Cambia el color del texto al pasar el mouse */
+}
+
+.main-image {
+  border-radius: 20px;
+}
+
+.link {
+  /* Tus estilos personalizados para el enlace */
+  color: rgb(255, 255, 255); /* Cambia el color a tu preferencia */
+  text-decoration: none; /* Si deseas eliminar el subrayado */
+  /* ... Otros estilos ... */
+}

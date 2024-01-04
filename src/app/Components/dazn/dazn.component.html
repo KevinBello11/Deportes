@@ -1,0 +1,19 @@
+<div class="video-page">
+  <div class="video-container">
+    <iframe allowfullscreen="true" scrolling="no" [src]="videoPrincipal" allow="encrypted-media" width="100%" height="100%" frameborder="0"></iframe>
+  </div>
+  
+  <div class="suggested-videos">
+    <h2>Videos Sugeridos</h2>
+    <div class="video-list">
+      <!-- Iteración sobre videos sugeridos -->
+      <div *ngFor="let video of videosSugeridos" class="video-thumbnail" (click)="cargarVideo(video)">
+        <img [src]="video.thumbnail" alt="{{ video.title }}">
+        <div class="video-details">
+          <p class="video-title">{{ video.title }}</p>
+          <p class="channel-description">{{ video.channelDescription }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

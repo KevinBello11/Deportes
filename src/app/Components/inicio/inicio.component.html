@@ -1,0 +1,34 @@
+<div class="video-container">
+  <div class="image-container">
+    <img [src]="imagenes[currentImageIndex]" class="main-image" />
+  </div>
+  <div class="related-videos">
+    <h3>DAZN</h3>
+    <div class="video-list">
+      <div class="video-item" *ngFor="let video of daznVideos">
+        <a [href]="video.link">
+          <img [src]="video.thumbnail" alt="{{ video.title }}">
+          <h4>{{ video.title }}</h4>
+        </a>
+      </div>
+    </div>
+
+    <h3>ESPN</h3>
+    <div class="video-list">
+      <div class="video-item" *ngFor="let video of espnVideos">
+        <img [src]="video.thumbnail" alt="{{ video.title }}">
+        <h4>{{ video.title }}</h4>
+      </div>
+    </div>
+
+    <h3>DIRECTV</h3>
+    <div class="video-list">
+      <div class="video-item" *ngFor="let video of directvVideos">
+        <img [src]="video.thumbnail" alt="{{ video.title }}">
+        <h4>{{ video.title }}</h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- mi-componente.component.html -->
