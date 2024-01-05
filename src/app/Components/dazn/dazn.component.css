@@ -1,96 +1,125 @@
-/* Estilos del contenedor principal */
+/* Estilos base */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Estilos para el contenedor principal */
 .video-page {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-start;
-  width: 100%;
-  font-family: Arial, sans-serif;
   padding: 20px;
-  box-sizing: border-box;
+  flex-wrap: wrap;
 }
 
-/* Estilos del contenedor del video principal */
+/* Estilos para el contenedor del video principal */
 .video-container {
-  width: 65%;
-  position: relative;
+  width: 70%;
+  max-width: 900px;
+  margin-right: 20px;
+  border-radius: 8px;
   overflow: hidden;
-  padding-bottom: 56.25%; /* Proporción 16:9 para mantener la relación de aspecto */
-  border-radius: 8px;
 }
 
-/* Estilos del iframe del video principal */
 .video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
-  border: none;
-  border-radius: 8px;
+  height: 500px;
 }
 
-/* Estilos del contenedor de los videos sugeridos */
-.suggested-videos  {
+/* Estilos para la sección de videos sugeridos */
+.suggested-videos {
   width: 30%;
-  padding-left: 20px;
-  box-sizing: border-box;
+  max-width: 400px;
 }
 
-.suggested-videos h2 {
-  color: #ffffff; /* Cambia el color a tu preferencia */
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: white;
 }
 
-/* Estilos de la lista de videos sugeridos */
+/* Estilos para la lista de videos sugeridos */
 .video-list {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-/* Estilos de cada miniatura de video sugerido */
+/* Estilos para cada miniatura de video sugerido */
 .video-thumbnail {
   display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 10px;
-  border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  align-items: center;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
 }
 
 .video-thumbnail:hover {
-  background-color: #1b2832;
+  transform: scale(1.05);
 }
 
 .video-thumbnail img {
   width: 120px;
   height: 90px;
-  border-radius: 4px;
   object-fit: cover;
 }
 
-/* Estilos para el texto del video sugerido */
+/* Estilos para los detalles del video sugerido */
 .video-details {
   flex: 1;
+  padding: 10px;
 }
 
 .video-title {
   font-weight: bold;
-  font-size: 14px;
-  line-height: 1.3;
-  color: #ffffff;
+  margin: 0;
+  font-size: 0.9rem;
+}
+p {
+  color: white;
+}
+.channel-description  {
+  margin: 5px 0 0;
+  color: #c0c0c0;
+  font-size: 0.8rem;
 }
 
-.video-author {
-  font-size: 12px;
-  color: #ffffff;
+/* Media query para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+  .video-page {
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .video-container {
+    width: 100%;
+    max-width: calc(100% - 40px);
+    margin-right: 0;
+    margin-bottom: 10px;
+    height: auto;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .video-container iframe {
+    width: 100%;
+    height: 320px;
+  }
+
+  .suggested-videos {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
-/* ... (otros estilos) ... */
-
-/* Estilos para la descripción del canal */
-.channel-description {
-  font-size: 12px;
-  color: #ffffff;
-  margin-top: 5px;
+/* Media query para pantallas medianas */
+@media screen and (min-width: 769px) {
+  .video-container {
+    width: 60%; /* Cambia el ancho del video principal en pantallas medianas */
+  }
 }

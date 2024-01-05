@@ -1,7 +1,7 @@
 /* mi-componente.component.css */
 /* Estilos para el sidenav y el contenido */
 .sidenav-container {
-  height: 100vh;
+  height: 100%;
   background-color: #111B22;
   
 }
@@ -11,13 +11,23 @@
   background-color: #1B2832;
 }
 
-.sidenav mat-toolbar {
+.sidenav .mat-toolbar {
   background-color: #010E17;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
 .mat-nav-list a {
   text-decoration: none;
   color: #333;
+}
+
+mat-sidenav-content {
+  scroll-behavior: smooth;
 }
 
 .mat-nav-list a:hover {
